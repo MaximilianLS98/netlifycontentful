@@ -4,11 +4,11 @@ import styles from '../styles/Home.module.css'
 import { fetchEntries } from '../util/contentfulPosts'
 import Post from '../components/Post'
 
-export default function Home() {
+export default function Home({ posts }) {
   return (
     <div className='posts'>
       {posts.map(post => {
-        return <Post key={Date.now()} title={post.title} description={post.description} image={post.image.fields} />
+        return <Post key={post.date} date={post.date} title={post.title} image={post.image} />
       })}
     </div>
   )

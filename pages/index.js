@@ -6,7 +6,7 @@ export default function Home({ posts }) {
   return (
     <div className='posts'>
       {posts.map(post => {
-        return <Post key={post.date} date={post.date} title={post.title} image={post.image} />
+        return <Post key={post.date} date={post.date} title={post.title} image={post.image.fields} />
       })}
     </div>
   )
